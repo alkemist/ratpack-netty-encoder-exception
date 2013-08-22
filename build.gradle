@@ -12,7 +12,13 @@ apply plugin: "ratpack"
 
 repositories {
     maven { url "http://oss.jfrog.org/artifactory/repo" }
+    maven { url "oss.sonatype.org/content/repositories/snapshots" }
     jcenter()
+}
+
+dependencies {
+    // Comment this out to use 4.0.6, and it will work.
+    compile 'io.netty:netty-codec-http:4.0.7.Final'
 }
 
 apply plugin: "idea"
